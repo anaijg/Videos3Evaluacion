@@ -1,6 +1,14 @@
 package reinoanimal;
 
-public class Mamifero {
+/**
+ * Vamos a hacer Mamifero clase abstracta
+ */
+abstract class Mamifero {
+
+    // métodos abstractos:
+    public abstract boolean nadar();
+
+    // métodos no abstractos:
     public String saludar() {
         return "el mamífero te saluda";
     }
@@ -10,3 +18,4 @@ public class Mamifero {
         System.out.println("Hola. Sssshhhhh");
     }
 }
+
