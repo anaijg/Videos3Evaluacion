@@ -4,8 +4,8 @@ public class Cliente extends Persona{
     private boolean gold;
     private String idContrato;
 
-    public Cliente(int añoNacimiento, String dirección, String nombre, boolean gold, String idContrato) {
-        super(añoNacimiento, dirección, nombre);
+    public Cliente(int añoNacimiento, String dirección, String nombre, String id, boolean gold, String idContrato) {
+        super(añoNacimiento, dirección, nombre, id);
         this.gold = gold;
         this.idContrato = idContrato;
     }

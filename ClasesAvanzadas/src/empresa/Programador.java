@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class Programador extends Empleado{
     private String[] lenguajes;
 
-    public Programador(int añoNacimiento, String dirección, String nombre, LocalDate fechaInicio, Long salario, String[] lenguajes) {
-        super(añoNacimiento, dirección, nombre, fechaInicio, salario);
+    public Programador(int añoNacimiento, String dirección, String nombre, String id, LocalDate fechaInicio, Long salario, String[] lenguajes) {
+        super(añoNacimiento, dirección, nombre, id, fechaInicio, salario);
         this.lenguajes = lenguajes;
     }
 

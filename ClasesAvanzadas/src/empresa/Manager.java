@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Manager extends Empleado{
     private boolean sonrisa;
 
-    public Manager(int añoNacimiento, String dirección, String nombre, LocalDate fechaInicio, Long salario, boolean sonrisa) {
-        super(añoNacimiento, dirección, nombre, fechaInicio, salario);
+    public Manager(int añoNacimiento, String dirección, String nombre, String id, LocalDate fechaInicio, Long salario, boolean sonrisa) {
+        super(añoNacimiento, dirección, nombre, id, fechaInicio, salario);
         this.sonrisa = sonrisa;
     }
 
