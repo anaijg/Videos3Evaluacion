@@ -2,6 +2,7 @@ package empresa;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Programador extends Empleado{
     private String[] lenguajes;
@@ -29,7 +30,8 @@ public class Programador extends Empleado{
         return cadena;
     }
 
-// Escribe un método que permita añadir un lenguaje al programador.
+
+    // Escribe un método que permita añadir un lenguaje al programador.
     public void añadirLenguaje(String lenguaje) {
         String[] nuevoArray = new String[lenguajes.length + 1]; // creamos un array nuevo, de tamaño igual al que tenemos ya como atributo, más el lenguaje que añadimos
         // rellenamos las primeras posiciones de este array con las que ya tenemos en el otro
@@ -42,5 +44,43 @@ public class Programador extends Empleado{
         lenguajes = nuevoArray.clone(); // el método clone() hace una copia del array
     }
 
+    // esta clase hereda de Empleado, que es abstracta,
+    // y ésta de Persona, que es abstracta, así que
+    // debemos desarrollar el método abstracto aquí, que es la primera
+    // que hereda y no es abstracta
+    @Override
+    public void imprimirDatosPersonales() {
+        System.out.println(toString());
+    }
 
+    // Desarróllalo en las subclases de forma que a los managers la subida sea de un 2% de su salario y a los programadores se les pregunte su nivel (Junior, Senior, Experto). Si es Junior, la subida es del 1%, si es Senior, del 1,5% y si es experto, del 2%.
+
+    @Override
+    public void subirSalario() {
+        // se les pregunte su nivel (Junior, Senior, Experto). Si es Junior, la subida es del 1%, si es Senior, del 1,5% y si es experto, del 2%.
+        Scanner sc = new Scanner(System.in);
+        int respuesta = 0;
+        double nuevoSalario = 0;
+        do {
+            System.out.println("Nivel:\n1. Junior\n2. Senior\n3. Experto");
+            respuesta = sc.nextInt(); sc.nextLine();
+            switch (respuesta) {
+                case 1:
+                    // Junior -> 1%
+                    nuevoSalario = this.getSalario() + this.getSalario() * 0.01;
+                    break;
+                case 2:
+                    // Senior -> 1,5%
+                    nuevoSalario = this.getSalario() + this.getSalario() * 0.015;
+                    break;
+                case 3:
+                    // Experto -> 2%
+                    nuevoSalario = this.getSalario() + this.getSalario() * 0.02;
+                    break;
+                default:
+                    System.out.println("Opción incorrecta");
+            }
+        } while (respuesta < 1 || respuesta > 3);
+        this.setSalario(nuevoSalario);
+    }
 }

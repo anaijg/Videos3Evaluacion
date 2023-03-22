@@ -1,0 +1,5 @@
+Ejercicio clases abstractas
+====================
+En el paquete empresa, haz abstractas las clases Persona y Empleado. Refactoriza para adaptar estos cambios.
+En la clase Persona, añade el método abstracto imprimirDatosPersonales() y desarróllalo en las subclases.
+En la clase Empleado, añade el método abstracto subirSalario(). Desarróllalo en las subclases de forma que a los managers la subida sea de un 2% de su salario y a los programadores se les pregunte su nivel (Junior, Senior, Experto). Si es Junior, la subida es del 1%, si es Senior, del 1,5% y si es experto, del 2%.

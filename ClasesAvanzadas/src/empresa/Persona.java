@@ -1,11 +1,14 @@
 package empresa;
 
-public class Persona {
+public abstract class Persona {
     private int añoNacimiento;
     private String dirección;
     private String nombre;
 
     private String id;
+
+    // En la clase Persona, añade el método abstracto imprimirDatosPersonales() y desarróllalo en las subclases.
+    public abstract void imprimirDatosPersonales();
 
     public Persona(int añoNacimiento, String dirección, String nombre, String id) {
         this.añoNacimiento = añoNacimiento;

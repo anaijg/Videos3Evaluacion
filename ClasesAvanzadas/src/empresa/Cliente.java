@@ -42,4 +42,11 @@ public class Cliente extends Persona{
 
         return cadena;
     }
+
+    // esta clase hereda de Persona, que es abstracta, así que
+    // debemos desarrollar el método abstracto
+    @Override
+    public void imprimirDatosPersonales() {
+        System.out.println(toString());
+    }
 }
